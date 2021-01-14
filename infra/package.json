@@ -1,0 +1,41 @@
+{
+  "name": "lambda-puppeteer-infra",
+  "version": "1.0.0",
+  "description": "Example of how to deploy an AWS Lambda function as a container containing Puppeteer",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "SHI International Corp.",
+    "url": "https://www.shi.com",
+    "organization": true
+  },
+  "bin": {
+    "tmp": "bin/app.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "update-dependencies": "ncu -u"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.84.0",
+    "@types/jest": "^26.0.20",
+    "@types/node": "14.14.20",
+    "jest": "^26.6.3",
+    "npm-check-updates": "~10.2.5",
+    "ts-jest": "^26.4.4",
+    "aws-cdk": "1.84.0",
+    "ts-node": "^9.1.1",
+    "typescript": "~4.1.3"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigatewayv2": "^1.84.0",
+    "@aws-cdk/aws-iam": "^1.84.0",
+    "@aws-cdk/aws-lambda": "^1.84.0",
+    "@aws-cdk/aws-s3": "^1.84.0",
+    "@aws-cdk/core": "1.84.0",
+    "crpm": "^2.4.0",
+    "source-map-support": "^0.5.19"
+  }
+}
