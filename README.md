@@ -2,6 +2,9 @@
 
 Example of how to deploy an AWS Lambda function as a container containing [Puppeteer](https://pptr.dev), with [CRPM](https://shi.github.io/crpm).
 
+This example uses one Lambda function to asynchronously invoke multiple instances of another Lambda function, which takes a screenshot of a website.
+This enables you to take several screenshots in parallel and scale horizontally.  The screenshots are stored in an S3 bucket.
+
 ## Instructions
 
 Deploy the cloud infrastructure.
@@ -11,6 +14,10 @@ Deploy the cloud infrastructure.
 ```bash
 # Change to infrastructure directory
 cd infra
+
+# Install and build the CDK application
+npm i
+npm run build
 
 # Deploy the CDK bootstrap stack
 cdk bootstrap aws://unknown-account/unknown-region
