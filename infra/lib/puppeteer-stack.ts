@@ -40,7 +40,7 @@ export class PuppeteerStack extends cdk.Stack {
     const invokeFn = new lambda.CfnFunction(this, 'InvokeFunction', invokeFnProps);
     
     new cdk.CfnOutput(this, 'ECRImageURI', {value: dockerImage.imageUri});
-    new cdk.CfnOutput(this, 'InitLambdaFunctionName', {value: invokeFn.ref});
+    new cdk.CfnOutput(this, 'InvokeLambdaFunctionName', {value: invokeFn.ref});
     new cdk.CfnOutput(this, 'BucketName', {value: bucket.ref});
   }
 }
