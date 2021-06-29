@@ -23,7 +23,7 @@ export const lambdaHandler = async(event: any, context: Context) => {
       const page = await browser.newPage();
       await page.setViewport({ width: 1920, height: 1080 });
       await page.goto(url);
-      const screenshot = await page.screenshot({ fullPage: true });
+      const screenshot = await page.screenshot({ fullPage: true }) as Buffer;
       await page.close();
       await browser.close();
       

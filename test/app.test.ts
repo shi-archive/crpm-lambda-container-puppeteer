@@ -1,6 +1,6 @@
 import * as puppeteer from 'puppeteer';
 
-it('start browser', async () => {
+it('test browser', async () => {
   const browser = await puppeteer.launch({
     args: [
       '--no-sandbox',
@@ -12,6 +12,9 @@ it('start browser', async () => {
   const browserVersion = await browser.version()
   console.log(`Started ${browserVersion}`);
   const page = await browser.newPage();
+  console.log('Browser page created');
   await page.close();
+  console.log('Browser page closed');
   await browser.close();
+  console.log('Browser closed');
 });
