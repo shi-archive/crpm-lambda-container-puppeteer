@@ -5,8 +5,9 @@ ARG AWS_SECRET_ACCESS_KEY
 ARG AWS_REGION=us-east-1
 
 # Install Chrome to get all of the dependencies installed
-ADD https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm chrome.rpm
-RUN yum install -y ./chrome.rpm
+RUN yum install -y amazon-linux-extras
+RUN amazon-linux-extras install epel -y
+RUN yum install -y chromium
 
 ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
     AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \

@@ -21,6 +21,7 @@ export const lambdaHandler = async(event: any, context: Context) => {
       const browserVersion = await browser.version()
       console.log(`Started ${browserVersion}`);
       const page = await browser.newPage();
+      page.setDefaultNavigationTimeout(60000);
       await page.setViewport({ width: 1920, height: 1080 });
       await page.goto(url);
       const screenshot = await page.screenshot({ fullPage: true }) as Buffer;

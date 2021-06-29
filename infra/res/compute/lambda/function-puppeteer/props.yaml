@@ -125,7 +125,7 @@ description: 'Puppeteer example'
 # Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-memorysize
 # Type: number
 # Optional
-memorySize: 1280
+memorySize: 1920
 
 # Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-packagetype
 # Type: string
@@ -155,7 +155,7 @@ packageType: 'Image'
 # Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-timeout
 # Type: number
 # Optional
-timeout: 180
+timeout: 210
 
 # Documentation: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tracingconfig
 # Type: object
